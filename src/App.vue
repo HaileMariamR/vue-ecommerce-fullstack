@@ -2,15 +2,23 @@
 
 
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+ 
+ <div>
+
+
+ <nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">My Shooping</a>
+  <router-link to="/products">Products</router-link> |
+      <router-link to="/cart">Cart</router-link>
+  
+</nav>
+
 
     <!-- router-view re render component -->
     <router-view/>
-  </div>
+
+ </div>
+
 </template>
 
 <style>
