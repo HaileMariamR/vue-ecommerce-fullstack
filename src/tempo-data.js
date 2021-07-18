@@ -11,7 +11,7 @@ import shoesImage10 from './assets/shoes-10.jpg';
 import shoesImage11 from './assets/shoes-11.jpg';
 import shoesImage12 from './assets/shoes-12.jpg';
 
-export const products = [{
+export const allProduct = [{
   id: '123',
   name: 'Running Shoes',
   price: '60.00',
@@ -100,7 +100,7 @@ export const products = [{
 }];
 
 export const cartItems = [
-  products[0],
-  products[2],
-  products[3],
+  allProduct[0],
+  allProduct[2],
+  allProduct[3],
 ];

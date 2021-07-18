@@ -1,11 +1,32 @@
 <template>
-    <h1>This is Product page </h1>
+     
+     
+
+
+        <div class=".grid-wrap">
+                <div v-for="product in allProduct" :key="product.id"
+                    class="product-item"
+                >
+                <h3 class="product-name">{{product.name}}</h3>
+                
+                </div>
+
+        </div>
+  
 </template>
 
 
 <script>
+
+import {allProduct} from '../tempo-data';
+
 export default {
     name:"Products",
+    data(){
+
+        return { allProduct };
+    
+    }
 
 }
 </script>

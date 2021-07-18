@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<<style>
+<style>
   * {
     box-sizing: border-box;
     font-family: Arial;

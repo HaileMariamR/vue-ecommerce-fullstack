@@ -1,5 +1,6 @@
 <template>
     <h1>This is Product Detail </h1>
+    
 </template>
 
 
