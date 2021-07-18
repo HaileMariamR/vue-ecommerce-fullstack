@@ -10,7 +10,7 @@
                 <img v-bind:src="product.imageUrl">
                 <h3 class="product-name">{{product.name}}</h3>
                 <p class="product-price">${{product.price}}</p>
-                <router-link v-bind:to="'products/' + product.id">
+                <router-link v-bind:to="'productDetail' + product.id">
                 <button>View Detail</button>
                 </router-link>
 
