@@ -2,12 +2,17 @@
  
 
     <div class="row">
-        <div class="offset-3 p-5">
-            <img v-bind:src="single_product.imageUrl" alt="">
-      
-            <h1>{{single_product.name}}</h1>
-            <h3 >{{single_product.price}}</h3>
+        <div class="row offset-4">
+             <img v-bind:src="single_product.imageUrl" alt="">
+               <h1>{{single_product.name}}</h1>
+            <h3 >${{single_product.price}}</h3>
             <p>Average Rating : {{single_product.averageRating}}</p>
+
+
+        </div>
+        <div class="row">
+          
+            <p class="text-center m-4">{{single_product.description}}</p>
             <button class="btn btn-primary" id="add">AddtoCart</button>
 
         </div>

@@ -103,4 +103,6 @@ export const cartItems = [
   allProduct[0],
   allProduct[2],
   allProduct[3],
+  allProduct[1],
+
 ];
