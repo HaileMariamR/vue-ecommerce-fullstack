@@ -1,3 +1,6 @@
+
+
+
 <template>
   <div id="app">
     <div id="nav">
@@ -11,6 +14,9 @@
 </template>
 
 <style>
+  body{
+    overflow-x: hidden;
+  }
   * {
     box-sizing: border-box;
     font-family: Arial;

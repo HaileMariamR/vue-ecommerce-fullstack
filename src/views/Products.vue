@@ -1,18 +1,28 @@
 <template>
      
      
+    <div class="">
 
-
-        <div class=".grid-wrap">
-                <div v-for="product in allProduct" :key="product.id"
-                    class="product-item"
+        <div class="row">
+                <div  v-for="product in allProduct" :key="product.id"
+                    class="product-item col-md-4"
                 >
+                <img v-bind:src="product.imageUrl">
                 <h3 class="product-name">{{product.name}}</h3>
-                
+                <p class="product-price">${{product.price}}</p>
+                <router-link v-bind:to="'products/' + product.id">
+                <button>View Detail</button>
+                </router-link>
+
                 </div>
 
         </div>
-  
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright: Hailemariam Fiakdie
+        </div>
+    </div>
+
 </template>
 
 
