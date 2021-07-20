@@ -15,7 +15,6 @@
                 </router-link>
 
                 </div>
-
         </div>
 
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
@@ -28,15 +27,43 @@
 
 <script>
 
-import {allProduct} from '../tempo-data';
+// import {allProduct} from '../tempo-data';
+import axios from 'axios'
+
 
 export default {
     name:"Products",
-    data(){
+     data(){
+        return { 
 
-        return { allProduct };
+          allProduct :[]
+           
+        }
     
-    }
+    }, 
+    
+
+     created() {
+  
+                // Creating loader
+            
+  
+                axios.get(
+        `http://localhost:3000/api/products`)
+                    .then(response => {
+  
+                        // JSON responses are 
+                        // automatically parsed
+                        this.allProduct = response.data
+                    })   
+  
+                    // Dealing with errors
+                    .catch(error => {
+                        console.log(error)
+                        this.errored = true
+                    })
+            }
+   
 
 }
 </script>
