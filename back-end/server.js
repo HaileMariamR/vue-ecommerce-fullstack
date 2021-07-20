@@ -2,14 +2,23 @@ import express  from 'express'
 import mongoose from 'mongoose'
 import Products from './model/product.js';
 import bodyParser from 'body-parser';
+import path from 'path'
+import { dirname } from 'path';
+import cors from 'cors'
+import { fileURLToPath } from "url";
 const db = mongoose.connect("mongodb://localhost:12345/v-ecommerce" , { useNewUrlParser: true } );
 
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
   
+
 const app = express()
+app.use('/images' , express.static(path.join(__dirname, '../assets')))
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(cors())
 
 const allRoutes = express.Router()
 allRoutes.route("/Products")
